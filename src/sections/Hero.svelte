@@ -1,5 +1,6 @@
 <script>
   import { Button } from "../components";
+  import Illustration from "../School mission and vision.svelte";
 </script>
 
 <!-- * * add gsap for logo and image.the image should have a reveal curtain onmount -->
@@ -20,7 +21,9 @@
       <Button buttonCopy="Learn More" />
     </div>
   </div>
-  <div class="hero-right illustration-box" />
+  <div class="hero-right illustration-box">
+    <Illustration />
+  </div>
 </section>
 
 <style>
@@ -40,8 +43,7 @@
   }
 
   .illustration-box {
-    background: green;
-    height: 400px;
+    height: 450px;
     width: 100%;
   }
 
@@ -65,11 +67,12 @@
     }
 
     .illustration-box {
-      width: 500px;
+      width: 560px;
+      margin-top: -4rem;
     }
 
     .hero-left {
-      width: 50%;
+      width: 45%;
     }
   }
 </style>
