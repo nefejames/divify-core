@@ -22,7 +22,7 @@
 
   h1 {
     font-size: 2rem;
-    color: #333;
+    color: var(--primary-color);
   }
 
   ul {
@@ -35,11 +35,11 @@
   a {
     text-decoration: none;
     font-size: 1.1rem;
-    color: #333;
+    color: var(--text-color);
   }
 
   a:hover {
-    color: #215ee9;
+    color: var(--primary-color);
     transition: all 0.4s;
   }
 

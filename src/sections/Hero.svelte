@@ -1,12 +1,14 @@
 <script>
   import { Button } from "../components";
-  import Illustration from "../School mission and vision.svelte";
+  import Illustration from "../illustration.svelte";
 </script>
 
 <!-- * * add gsap for logo and image.the image should have a reveal curtain onmount -->
-
+<!-- add light theme toggle -->
+<!-- write articles : 1-using emotion in svelte; 2-conditional styling in svelte
+3-theme toggling in svelte
+-->
 <section>
-  <!-- check how to use sass in svelte and switch to it.also check css-modules and css-in-js libs for svelte-->
   <div class="hero-left">
     <div class="hero-copy">
       <h2>We are <span>DivifyCore</span></h2>
@@ -48,17 +50,18 @@
   }
 
   h2 {
-    color: #333;
+    color: var(--text-color);
     font-size: calc(2.3rem + 0.7vw);
+    margin-bottom: 1rem;
   }
 
   p {
     font-size: 1.2rem;
-    color: #333;
+    color: var(--text-color);
   }
 
   span {
-    color: #215ee9;
+    color: var(--primary-color);
   }
 
   @media (min-width: 640px) {
