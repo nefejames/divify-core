@@ -1,0 +1,75 @@
+<script>
+  import { Button } from "../components";
+</script>
+
+<!-- * * add gsap for logo and image.the image should have a reveal curtain onmount -->
+
+<section>
+  <!-- check how to use sass in svelte and switch to it.also check css-modules and css-in-js libs for svelte-->
+  <div class="hero-left">
+    <div class="hero-copy">
+      <h2>We are <span>DivifyCore</span></h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sapiente
+        distinctio, quaerat deleniti soluta minus consectetur placeat doloribus
+        architecto eum.
+      </p>
+    </div>
+    <div class="cta-box">
+      <Button buttonCopy="Get Started" isPrimaryBtn />
+      <Button buttonCopy="Learn More" />
+    </div>
+  </div>
+  <div class="hero-right illustration-box" />
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .hero-left {
+    width: auto;
+    margin-bottom: 2rem;
+  }
+
+  .hero-copy {
+    margin-bottom: 2rem;
+  }
+
+  .illustration-box {
+    background: green;
+    height: 400px;
+    width: 100%;
+  }
+
+  h2 {
+    color: #333;
+    font-size: calc(2.3rem + 0.7vw);
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  span {
+    color: #215ee9;
+  }
+
+  @media (min-width: 640px) {
+    section {
+      flex-direction: row;
+    }
+
+    .illustration-box {
+      width: 500px;
+    }
+
+    .hero-left {
+      width: 50%;
+    }
+  }
+</style>
