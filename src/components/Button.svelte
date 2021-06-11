@@ -15,7 +15,6 @@
     border-radius: 8px;
     outline: none;
     font-size: 1.2rem;
-    font-weight: 200;
     box-shadow: var(--box-shadow);
   }
 
