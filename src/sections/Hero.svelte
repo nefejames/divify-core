@@ -27,6 +27,7 @@
     <Illustration />
   </div>
 </section>
+<p class="copyright">Built with Svelte, GSAP, ☕ and lots of 💓</p>
 
 <style>
   section {
@@ -58,6 +59,11 @@
   p {
     font-size: 1.2rem;
     color: var(--text-color);
+  }
+
+  p.copyright {
+    margin: 1rem;
+    text-align: center;
   }
 
   span {
