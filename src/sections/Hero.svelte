@@ -1,6 +1,26 @@
 <script>
+  import { onMount } from "svelte";
   import { Button } from "../components";
   import Illustration from "../illustration.svelte";
+  import { gsap, Power3 } from "gsap";
+
+  onMount(() => {
+    let tl = gsap.timeline();
+
+    tl.from("h2", {
+      duration: 0.5,
+      y: 100,
+      autoAlpha: 0,
+      ease: Power3.easeOut,
+      stagger: 1.5,
+    }).from("p", {
+      duration: 0.5,
+      y: 100,
+      autoAlpha: 0,
+      ease: Power3.easeOut,
+      stagger: 1.5,
+    });
+  });
 </script>
 
 <!-- * * add gsap for logo and image.the image should have a reveal curtain onmount -->
@@ -11,7 +31,7 @@
 <section>
   <div class="hero-left">
     <div class="hero-copy">
-      <h2>We are <span>DivifyCore</span></h2>
+      <h2 class="heading">We are <span>DivifyCore</span></h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sapiente
         distinctio, quaerat deleniti soluta minus consectetur placeat doloribus

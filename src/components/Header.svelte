@@ -1,6 +1,25 @@
 <script>
+  import { onMount } from "svelte";
+  import { gsap, Elastic } from "gsap";
+
   let mobileNavOpened = false;
   const toggleMobileNav = () => (mobileNavOpened = !mobileNavOpened);
+
+  onMount(() => {
+    let tl = gsap.timeline();
+
+    tl.from("li", {
+      duration: 0.75,
+      x: 300,
+      autoAlpha: 0,
+      delay: 1.5,
+      ease: Elastic.easeOut(1, 1),
+      stagger: {
+        each: 0.75,
+        amount: 0.5,
+      },
+    });
+  });
 </script>
 
 <header>
@@ -43,6 +62,7 @@
     list-style: none;
     justify-content: space-between;
     width: 400px;
+    /* overflow: hidden; */
   }
 
   a {
