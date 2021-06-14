@@ -1,11 +1,19 @@
 <script>
   import { onMount } from "svelte";
   import { gsap, Elastic } from "gsap";
-
+  let link;
   let mobileNavOpened = false;
   const toggleMobileNav = () => (mobileNavOpened = !mobileNavOpened);
 
   onMount(() => {
+    //close navigation drawer when links are clicked
+    link = document.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileNavOpened = false;
+      });
+    });
+
+    //gsap animation set up
     let tl = gsap.timeline();
 
     tl.from("li", {
@@ -95,7 +103,7 @@
     }
     .logo,
     .mobile-dropdown-toggle {
-      z-index: 1;
+      z-index: 2;
     }
 
     .mobile-dropdown-toggle {
@@ -125,6 +133,7 @@
 
     nav.dropdown-opened > .dropdown-link-container {
       opacity: 1;
+      z-index: 1;
       transform: translateY(0);
     }
 
